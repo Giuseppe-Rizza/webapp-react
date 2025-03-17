@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 
 import ReviewCard from '../components/ReviewCard';
 
+import ReviewForm from '../components/ReviewForm';
+
 import { Link, useParams } from "react-router-dom"
 
 export default function MoviePage() {
@@ -66,11 +68,12 @@ export default function MoviePage() {
 
             </section>
 
-            <footer className="border-top border-1 pt-2 mb-3 d-flex justify-content-end">
+            <section>
 
-                <Link className="btn btn-secondary" to="/">Homepage</Link>
+                <ReviewForm movie_id={movie.id} realoadReviews={fetchMovie} />
 
-            </footer>
+            </section>
+
         </>
     );
 }

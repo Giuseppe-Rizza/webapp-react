@@ -4,7 +4,7 @@ const MovieCard = (props) => {
 
     return (
 
-        <div className="card mb-4">
+        <div className="card mb-4" style={{ width: "20rem" }}>
             <img className="card-img-top"
 
                 src={image}
@@ -19,7 +19,12 @@ const MovieCard = (props) => {
 
                 <p className="card-text">{abstract}</p>
 
-                <Link to={`/movies/${id}`} className="btn btn-primary">Info</Link>
+                <div className="d-flex justify-content-center mt-auto">
+                    <Link to={`/movies/${id}`} className="btn btn-primary px-4 py-2 rounded-pill shadow">
+                        Info
+                    </Link>
+                </div>
+
 
             </div>
 
